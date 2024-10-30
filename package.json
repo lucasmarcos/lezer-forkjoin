@@ -2,12 +2,13 @@
   "type": "module",
   "devDependencies": {
     "@lezer/generator": "^1.7.1",
-    "esbuild": "^0.23.1"
+    "esbuild": "^0.24.0"
   },
   "dependencies": {
     "@lezer/lr": "^1.4.2"
   },
   "scripts": {
-    "prepare": "lezer-generator src/forkjoin.grammar -o src/parser.js"
-  }
+    "prepare": "lezer-generator src/forkjoin.grammar -o src/lezerParser.js"
+  },
+  "packageManager": "npm@10.9.0+sha512.65a9c38a8172948f617a53619762cd77e12b9950fe1f9239debcb8d62c652f2081824b986fee7c0af6c0a7df615becebe4bf56e17ec27214a87aa29d9e038b4b"
 }

@@ -1,4 +1,4 @@
-import { parser } from "./parser.js"
+import { parser as lezerParser } from "./lezerParser.js"
 
 const example = `VAR_J = 2;
 C1;
@@ -14,7 +14,7 @@ ROT_C4:
   C4;
 `;
 
-const tree = parser.parse(example);
+const tree = lezerParser.parse(example);
 
 console.log(tree);
 for (const c in tree.children) {
