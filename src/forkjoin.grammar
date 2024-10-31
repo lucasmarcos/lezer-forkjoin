@@ -1,6 +1,6 @@
 @top File { sttm* }
 
-@skip { space | comment }
+@skip { space | LineComment }
 
 sttm { expr | Def }
 
@@ -15,7 +15,7 @@ Def { Label ":" }
 @tokens {
   @precedence { "FORK", "JOIN", Label }
   space { @whitespace+ }
-  comment { "//" ![\n]* }
+  LineComment { "//" ![\n]* }
   Label { $[a-zA-Z_0-9]+ }
   Digit { $[0-9]+ }
 }
